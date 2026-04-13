@@ -1,0 +1,41 @@
+name: Deploy Full App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # ================= BACKEND =================
+      - name: Deploy Backend
+        run: |
+          cd backend
+          docker stop backend || true
+          docker rm backend || true
+          docker build -t backend .
+          docker run -d -p 4000:4000 --env-file .env --name backend --restart always backend
+
+      # ================= FRONTEND =================
+      - name: Deploy Frontend
+        run: |
+          cd frontend
+          docker stop frontend || true
+          docker rm frontend || true
+          docker build -t frontend .
+          docker run -d -p 3000:80 --name frontend --restart always frontend
+
+      # ================= ADMIN =================
+      - name: Deploy Admin
+        run: |
+          cd admin
+          docker stop admin || true
+          docker rm admin || true
+          docker build -t admin .
+          docker run -d -p 5000:80 --name admin --restart always admin
