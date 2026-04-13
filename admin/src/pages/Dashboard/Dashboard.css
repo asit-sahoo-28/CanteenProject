@@ -1,0 +1,386 @@
+
+/* 
+
+/* =========================
+   ROOT & VARIABLES
+========================= */
+:root {
+  --bg-main: #020617;
+  --bg-panel: #020617;
+  --glass: rgba(255, 255, 255, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.12);
+  --glow-green: #22c55e;
+  --glow-blue: #38bdf8;
+  --glow-purple: #a78bfa;
+}
+
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 26px;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, sans-serif;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Fade on load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   TITLE
+========================= */
+.dashboard-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin-bottom: 36px;
+  color: #f8fafc;
+  text-shadow: 0 0 25px rgba(255,255,255,0.15);
+}
+
+/* =========================
+   STATS CARDS
+========================= */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-bottom: 44px;
+}
+
+.dashboard-card {
+  position: relative;
+  padding: 26px;
+  border-radius: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+  transform-style: preserve-3d;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Glow sweep */
+.dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255,255,255,0.35),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-card:hover::before {
+  opacity: 1;
+  animation: sweep 1.4s linear;
+}
+
+@keyframes sweep {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* Hover lift */
+.dashboard-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* Card text */
+.card-title {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+/* BIG digital numbers */
+.dashboard-card h2 {
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-variant-numeric: tabular-nums;
+  animation: pop 0.8s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* =========================
+   CARD COLORS
+========================= */
+.dashboard-card:nth-child(1) {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+.dashboard-card:nth-child(2) {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+}
+.dashboard-card:nth-child(3) {
+  background: linear-gradient(135deg, #a78bfa, #6d28d9);
+}
+
+/* =========================
+   RECENT ORDERS PANEL
+========================= */
+.dashboard-orders {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border-glass);
+  border-radius: 22px;
+  padding: 26px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+}
+
+.dashboard-orders h2 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+/* Order rows */
+.recent-order {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr 0.6fr;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  transition: all 0.25s ease;
+}
+
+.recent-order:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateX(4px);
+}
+
+/* Status pulse */
+.recent-order p:last-child {
+  font-weight: 700;
+  color: #22c55e;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 0 rgba(34,197,94,0); }
+  50% { text-shadow: 0 0 14px rgba(34,197,94,0.8); }
+  100% { text-shadow: 0 0 0 rgba(34,197,94,0); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (min-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-card h2 {
+    font-size: 36px;
+  }
+
+  .recent-order {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-dashboard {
+  padding: 26px 26px 26px 60px;  /* top right bottom left */
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   ROOT & VARIABLES
+========================= */
+:root {
+  --bg-main: #020617;
+  --glass: rgba(255, 255, 255, 0.06);
+  --border-glass: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   DASHBOARD WRAPPER
+========================= */
+.admin-dashboard {
+  min-height: calc(100vh - 70px); /* full screen minus navbar */
+  width: 100%;
+  padding: 32px;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, sans-serif;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade on load */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   TITLE
+========================= */
+.dashboard-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #f8fafc;
+}
+
+/* =========================
+   STATS CARDS
+========================= */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px;
+}
+
+.dashboard-card {
+  padding: 28px;
+  border-radius: 20px;
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+}
+
+.card-title {
+  font-size: 14px;
+  opacity: 0.85;
+  margin-bottom: 8px;
+}
+
+.dashboard-card h2 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* Card colors */
+.dashboard-card:nth-child(1) {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+.dashboard-card:nth-child(2) {
+  background: linear-gradient(135deg, #38bdf8, #0369a1);
+}
+.dashboard-card:nth-child(3) {
+  background: linear-gradient(135deg, #a78bfa, #6d28d9);
+}
+
+/* =========================
+   RECENT ORDERS
+========================= */
+.dashboard-orders {
+  background: var(--glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 22px;
+  padding: 28px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+}
+
+.dashboard-orders h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Orders list */
+.recent-order {
+  display: grid;
+  grid-template-columns: 1.6fr 0.7fr 0.7fr;
+  gap: 16px;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.05);
+  transition: all 0.25s ease;
+}
+
+.recent-order:hover {
+  background: rgba(255,255,255,0.09);
+  transform: translateX(4px);
+}
+
+.recent-order p {
+  font-size: 14px;
+}
+
+/* Status highlight */
+.recent-order p:last-child {
+  font-weight: 700;
+  color: #22c55e;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  .admin-dashboard {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-title {
+    font-size: 26px;
+  }
+
+  .dashboard-card h2 {
+    font-size: 34px;
+  }
+
+  .recent-order {
+    grid-template-columns: 1fr;
+  }
+}

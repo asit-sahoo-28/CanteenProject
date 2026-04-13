@@ -1,0 +1,191 @@
+/* =========================
+   HEADER CONTAINER
+========================= */
+ .header {
+  width: 100%;
+  height: 36vw;
+  min-height: 420px;
+  margin: 30px auto;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("/cann.avif") center / cover no-repeat;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: zoomFade 1.4s ease-in-out;
+} 
+
+/* =========================
+   HEADER CONTENT
+========================= */
+ .header-content {
+  position: absolute;
+  bottom: 12%;
+  left: 6%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  animation: slideUp 1.5s ease forwards;
+}
+
+/* Heading */
+.header-content h2 {
+  font-weight: 600;
+  color: #ffffff;
+  font-size: clamp(28px, 4.5vw, 56px);
+  line-height: 1.15;
+}
+
+/* Paragraph */
+.header-content p {
+  color: #f1f1f1;
+  font-size: clamp(14px, 1.1vw, 18px);
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+/* Button */
+.header-content button {
+  width: fit-content;
+  border: none;
+  background-color: #ffffff;
+  color: orange;
+  font-weight: 600;
+  padding: 14px 32px;
+  font-size: 15px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.header-content button:hover {
+  background-color: rgba(255, 127, 17, 0.65) ;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomFade {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+  .header {
+    height: 45vw;
+    min-height: 380px;
+  }
+
+  .header-content {
+    max-width: 460px;
+    left: 5%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .header {
+    height: 70vw;
+    min-height: 320px;
+    border-radius: 14px;
+  }
+
+  .header-content {
+    bottom: 10%;
+    left: 6%;
+    max-width: 90%;
+  }
+
+  .header-content p {
+    display: none;
+  }
+
+  .header-content button {
+    padding: 12px 28px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+  .header {
+    height: 85vw;
+  }
+
+  .header-content h2 {
+    font-size: 26px;
+  }
+}   
+
+
+
+
+
+body{
+  background:#FFF6ED;
+}
+
+
+
+
+
+
+.header {
+  position: relative;
+}
+
+/* Orange + White overlay (no blue) */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(230, 57, 70, 0.75) 0%,   /* red */
+    rgba(255, 127, 17, 0.65) 25%, /* orange */
+    rgba(255, 255, 255, 0.25) 55%, /* white fade */
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  z-index: 1;
+}
+
+/* keep content above overlay */
+.header-content {
+  z-index: 2;
+} 
+
+
+
+
+
+

@@ -1,0 +1,523 @@
+/* .placeorder{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 100px;
+}
+
+.placeorde-left{
+    width: 100%;
+    max-width:max(30%,500px);
+}
+.placeorde-left .title{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+.placeorde-left input{
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline-color: tomato;
+} 
+
+.placeorde-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+.placeorder-right{
+    width: 100%;
+    max-width: max(40%,500px);
+}
+.placeorder-right .carttotal button{
+    margin-top: 30px;
+}
+
+
+
+
+@media (max-width: 750px) {
+  .placeorder {
+    flex-direction: column;
+  }
+
+  .placeorder-right {
+    order: 2;  /* ensure it goes below */
+    /* width: 100%;
+    margin-top: 20px;
+  }
+
+  .placeorde-left {
+    order: 1;
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+ 
+
+
+
+
+/* 
+
+/* ================================
+   GLOBAL
+================================ */
+.placeorder {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* ================================
+   LEFT & RIGHT PANELS
+================================ */
+.placeorder-left,
+.placeorder-right {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* LEFT PANEL */
+.placeorder-left {
+  flex: 2;
+}
+
+/* RIGHT PANEL */
+.placeorder-right {
+  flex: 1;
+  height: fit-content;
+}
+
+/* ================================
+   TITLES
+================================ */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ================================
+   TABLE LIST
+================================ */
+.tables {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ================================
+   TABLE CARD
+================================ */
+.table-box {
+  padding: 18px;
+  border-radius: 16px;
+  background: #f7f7f7;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.table-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* ================================
+   TABLE TITLE
+================================ */
+.table-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+/* ================================
+   CHAIRS GRID
+================================ */
+.chairs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ================================
+   CHAIR BUTTON
+================================ */
+.chair {
+  padding: 12px 10px;
+  border-radius: 14px;
+  border: 1.5px solid #ddd;
+  background: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+
+/* Hover animation */
+.chair:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: #f0f0f0;
+}
+
+/* Selected chair */
+.chair.selected {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ================================
+   SELECTED INFO
+================================ */
+.selected-info {
+  margin-top: 16px;
+  font-size: 15px;
+  font-weight: 500;
+  animation: slideUp 0.3s ease;
+}
+
+/* ================================
+   CART TOTAL
+================================ */
+.carttotal h2 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.carttotal hr {
+  border: none;
+  height: 1px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* ================================
+   PROCEED BUTTON
+================================ */
+.carttotal button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  background: #000000;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.carttotal button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .placeorder {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .chairs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .placeorder {
+    padding: 10px;
+  }
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+
+
+
+
+
+/* MAIN CONTAINER */
+.cart-total {
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s ease;
+}
+
+/* TITLE */
+.cart-total h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #1c1c1c;
+}
+
+/* PRICE ROWS */
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 14px 0;
+  font-size: 15px;
+  color: #444;
+}
+
+.cart-total-details b {
+  font-size: 18px;
+  color: #111;
+}
+
+/* SERVICE FEE LIGHT COLOR */
+.cart-total-details p:last-child {
+  font-weight: 500;
+}
+
+/* COUPON SECTION */
+.coupon-box {
+  display: flex;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.coupon-box input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+  font-size: 14px;
+  background: #fafafa;
+  transition: 0.3s ease;
+}
+
+.coupon-box input:focus {
+  outline: none;
+  border-color: #fc8019; /* Swiggy orange */
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(252, 128, 25, 0.1);
+}
+
+.coupon-box button {
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #fc8019;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.coupon-box button:hover {
+  background: #e56f0f;
+  transform: translateY(-2px);
+}
+
+/* DISCOUNT STYLE */
+.discount {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+/* DIVIDER */
+.cart-total hr {
+  border: none;
+  height: 1px;
+  background: #eee;
+  margin: 20px 0;
+}
+
+/* TOTAL SECTION */
+.cart-total-details:last-child {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* PROCEED BUTTON */
+.proceed-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  border: none;
+  background: linear-gradient(135deg, #fc8019, #ff9f43);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(252, 128, 25, 0.25);
+}
+
+.proceed-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(252, 128, 25, 0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cart-total {
+    margin: 20px;
+    padding: 22px;
+  }
+
+  .coupon-box {
+    flex-direction: column;
+  }
+
+  .coupon-box button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-total {
+    border-radius: 14px;
+    padding: 18px;
+  }
+
+  .cart-total h2 {
+    font-size: 18px;
+  }
+
+  .cart-total-details {
+    font-size: 14px;
+  }
+
+  .proceed-btn {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #ffffff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Payment Method Box */
+.payment-method-box{
+  margin-top: 20px;
+  padding: 18px 20px;
+  background: #FFF9F4;
+  border: 1px solid #FFE3CC;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Heading */
+.payment-method-box h3{
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Radio row */
+.payment-method-box label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: 1px solid transparent;
+}
+
+/* Hover */
+.payment-method-box label:hover{
+  background: #FFF3E8;
+  border: 1px solid #FFD2B3;
+}
+
+/* Radio button */
+.payment-method-box input[type="radio"]{
+  accent-color: #FF7F11;
+  width: 16px;
+  height: 16px;
+}

@@ -1,0 +1,148 @@
+/* ===== Container ===== */
+.offer-mail-panel {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+/* ===== Title ===== */
+.offer-mail-panel h2 {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+   margin-top: 40px;
+}
+
+/* ===== Inputs ===== */
+.offer-mail-panel input,
+.offer-mail-panel textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #e2e2e2;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  background: #fafafa;
+}
+
+/* Focus Effect */
+.offer-mail-panel input:focus,
+.offer-mail-panel textarea:focus {
+  border-color: #27ae60;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.15);
+}
+
+/* ===== Textarea ===== */
+.offer-mail-panel textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* ===== Button ===== */
+.offer-mail-panel button {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.offer-mail-panel button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(39, 174, 96, 0.35);
+}
+
+/* Click */
+.offer-mail-panel button:active {
+  transform: scale(0.98);
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 768px) {
+  .offer-mail-panel {
+    margin: 25px 16px;
+    padding: 24px;
+  }
+
+  .offer-mail-panel h2 {
+    font-size: 22px;
+  }
+
+  .offer-mail-panel input,
+  .offer-mail-panel textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 480px) {
+  .offer-mail-panel {
+    margin: 20px 12px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .offer-mail-panel h2 {
+    font-size: 20px;
+  }
+
+  .offer-mail-panel button {
+    font-size: 15px;
+    padding: 14px;
+  }
+}
+
+/* ===== Very Small Devices ===== */
+@media (max-width: 360px) {
+  .offer-mail-panel {
+    padding: 16px;
+  }
+
+  .offer-mail-panel input,
+  .offer-mail-panel textarea {
+    padding: 10px;
+  }
+}
+
+
+.ai-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: 0.3s;
+}
+
+.ai-btn:hover {
+  transform: translateY(-2px);
+}
+
+.ai-btn.loading {
+  background: #888;
+  cursor: not-allowed;
+}

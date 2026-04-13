@@ -1,0 +1,225 @@
+
+/* ================= PAGE WRAPPER ================= */
+.orders {
+  width: 100%;
+  min-height: calc(100vh - 68px);
+
+  padding: 30px;
+
+  background: linear-gradient(145deg, #020617, #0b0f1a);
+  color: #e5e7eb;
+
+  overflow-y: auto;
+  animation: fadeUp 0.6s ease;
+}
+
+/* ================= TITLE ================= */
+.orders-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #f8fafc;
+  letter-spacing: 0.6px;
+}
+
+/* ================= CONTAINER ================= */
+.orders-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+
+/* ================= EMPTY ================= */
+.orders-empty {
+  text-align: center;
+  font-size: 15px;
+  color: #94a3b8;
+}
+
+/* ================= ORDER CARD ================= */
+.order-card {
+  background: linear-gradient(145deg, #020617, #0f172a);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 0 30px rgba(56, 189, 248, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+
+  transition: all 0.35s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow:
+    0 0 40px rgba(56, 189, 248, 0.35),
+    inset 0 0 0 1px rgba(56, 189, 248, 0.3);
+}
+
+/* ================= TEXT ================= */
+.order-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.order-id {
+  font-size: 12px;
+  color: #94a3b8;
+  word-break: break-all;
+}
+
+.order-user {
+  font-size: 14px;
+}
+
+.order-amount {
+  font-size: 16px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.order-status {
+  font-size: 14px;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* ================= ITEMS ================= */
+.order-items {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.order-items-title {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #cbd5f5;
+}
+
+.order-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+
+  font-size: 13px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  color: #e5e7eb;
+}
+
+.item-quantity {
+  color: #94a3b8;
+}
+
+/* ================= BUTTONS ================= */
+.btn-green {
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-green:hover {
+  background: #16a34a;
+}
+
+.btn-red {
+  margin-top: 12px;
+  padding: 10px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-red:hover {
+  background: #dc2626;
+}
+
+/* ================= STATUS COLORS ================= */
+.status-placed { color: #38bdf8; font-weight: 600; }
+.status-accepted { color: #8b5cf6; font-weight: 600; }
+.status-cooking { color: #f59e0b; font-weight: 600; }
+.status-ready { color: #14b8a6; font-weight: 600; }
+.status-delivered { color: #22c55e; font-weight: 600; }
+.status-cancelled { color: #ef4444; font-weight: 600; }
+
+/* ================= SELECT ================= */
+select {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: #1e293b;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  transition: 0.3s;
+}
+
+select:hover {
+  border-color: #38bdf8;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 768px) {
+  .orders-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .orders-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+  .orders {
+    padding: 20px 16px;
+  }
+
+  .orders-title {
+    font-size: 22px;
+  }
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

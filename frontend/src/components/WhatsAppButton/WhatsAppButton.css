@@ -1,0 +1,41 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 24px; 
+  right: 24px;  
+  z-index: 50;
+  background-color: #25D366;
+  padding: 16px; 
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  animation: whatsappPulse 2.5s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  color: white;
+}
+
+@keyframes whatsappPulse {
+  0% { transform: scale(1); }
+  20% { transform: scale(1.08); }
+  40% { transform: scale(1); }
+  60% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
+
+
+
+

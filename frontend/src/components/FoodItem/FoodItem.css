@@ -1,0 +1,401 @@
+
+
+.food-item{
+    width: 100%;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: 0.3s;
+    animation: fadeIn 1s;
+}
+.food-item-image{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
+.food-item-info{
+    padding: 30px;
+}
+.food-item-name-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+}
+.food-item-name-rating p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.food-item-name-rating img{
+    width: 70px;
+}
+.food-item-desc{
+    color: #676767;
+    font-size: 12px;
+}
+.food-item-price{
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.food-item-img-container{
+    position: relative;
+}
+.food-item-img-container .add{
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.food-item-counter{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    background-color: white;
+
+}
+.food-item-counter img{
+    width: 30px;
+}
+
+
+
+
+
+/* Disable look */
+.food-disabled {
+  opacity: 0.7;
+}
+
+/* Unavailable Button */
+.unavailable-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #808080;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Flash Sale Badge */
+.flash-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(45deg, #ff4d4d, #ff0000);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Stock Text */
+.stock-text {
+  font-size: 12px;
+  color: green;
+  margin-top: 4px;
+}
+
+
+
+
+
+
+
+
+.disabled-food {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.unavailable-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.stock-badge {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.flash-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.disabled-btn {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+
+
+.disabled-food {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.not-available-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  background: #ddd;
+  border: none;
+  border-radius: 6px;
+  color: #555;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+/* FLASH SALE */
+.flash-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(45deg,#ff9800,#ff5722);
+  color: white;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* SELL FAST */
+.sellfast-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  background: linear-gradient(45deg,#ff1744,#ff5252);
+  color: white;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 20px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+/* ONLY FEW LEFT */
+.onlyfew-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  background: linear-gradient(45deg,#ff3d00,#ff6e40);
+  color: white;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* OUT OF STOCK */
+.out-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(45deg,#424242,#000);
+  color: white;
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+ */
+
+
+
+.flash-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(45deg, red, orange);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+.sellfast-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.onlyfew-badge {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  background: #ff4444;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.out-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
+
+
+
+/* match card color with body background */
+.food-item{
+    background: #FFF9F4;
+    border: 1px solid #FFE3CC;
+    box-shadow: 0px 4px 15px rgba(255, 127, 17, 0.08);
+}
+
+.food-item-info{
+    background: #FFF9F4;
+}
+
+/* optional hover (looks better) */
+.food-item:hover{
+    transform: translateY(-4px);
+    box-shadow: 0px 8px 25px rgba(255, 127, 17, 0.15);
+}
+
+/* optional theme price color */
+.food-item-price{
+    color: #E63946;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= FIX SAME CARD SIZE ================= */
+ 
+.food-item{
+  height: 100%;
+   min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* FIX IMAGE SIZE */
+.food-item-image{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* FIX CONTENT STRUCTURE */
+.food-item-info{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FIX TITLE HEIGHT */
+.food-item-name-rating p{
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* FIX DESCRIPTION HEIGHT */
+.food-item-desc{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 32px;
+}
+
+/* FIX PRICE POSITION */
+.food-item-price{
+  margin-top: auto;
+} 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;              /* desktop height */
+  min-height: 420px;         /* safety for small screens */
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 40px auto;
+}
+
+/* 🎥 Background video */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills container perfectly */
+}
+
+/* 🌑 Dark overlay for better contrast */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.6)
+  );
+  z-index: 1;
+}
+
+/* 📱 Tablet screens */
+@media (max-width: 1024px) {
+  .hero {
+    height: 65vh;
+    margin: 30px auto;
+    border-radius: 14px;
+  }
+}
+
+/* 📱 Mobile screens */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh;
+    min-height: 300px;
+    border-radius: 12px;
+    margin: 20px auto;
+  }
+
+  .hero-video {
+    object-position: center;
+  }
+}
+
+/* 📱 Small mobile */
+@media (max-width: 480px) {
+  .hero {
+    height: 45vh;
+    min-height: 260px;
+    border-radius: 10px;
+  }
+}
+
+
+
+
+

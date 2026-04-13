@@ -1,0 +1,422 @@
+
+.add form {
+  width: 100%;
+  max-width: 900px;
+
+  padding: 35px;
+  border-radius: 20px;
+
+  background: linear-gradient(145deg, #0b0f1a, #020617);
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ================= FLEX COLUMN ================= */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ================= LABEL ================= */
+
+.add p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+/* ================= IMAGE UPLOAD ================= */
+
+.add-img-upload {
+  align-items: flex-start;
+}
+
+.add-img-upload img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  padding: 15px;
+  cursor: pointer;
+
+  background: #0f172a;
+  border: 2px dashed rgba(56, 189, 248, 0.4);
+
+  transition: 0.3s ease;
+}
+
+.add-img-upload img:hover {
+  transform: scale(1.05);
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* ================= INPUTS ================= */
+
+.add input,
+.add textarea,
+.add select {
+  width: 100%;
+  padding: 14px 16px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #0f172a;
+  color: #e5e7eb;
+
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.add textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+/* Focus Effect */
+.add input:focus,
+.add textarea:focus,
+.add select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+/* ================= GRID FOR CATEGORY & PRICE ================= */
+
+.add-category-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* ================= BUTTON ================= */
+
+.add-btn {
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 14px;
+  border: none;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .add {
+    padding: 30px 20px;
+  }
+
+  .add form {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-category-price {
+    grid-template-columns: 1fr;
+  }
+
+  .add form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add {
+    padding: 20px 15px;
+  }
+
+  .add-img-upload img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= GLOBAL RESET (IF NOT EXISTS) ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= PAGE WRAPPER (GLOBAL) ================= */
+/* Put this in App.css OR index.css */
+.page-content {
+  padding-top: 68px;        /* Navbar height */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* ================= ADD PAGE WRAPPER ================= */
+
+.add {
+  width: 100%;
+  min-height: calc(100vh - 68px);
+
+  padding: 40px 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  background: linear-gradient(135deg, #0f172a, #020617);
+  overflow-x: hidden;
+}
+
+/* ================= FORM CONTAINER ================= */
+
+.add form {
+  width: 100%;
+  max-width: 900px;
+
+  padding: 35px;
+  border-radius: 20px;
+
+  background: linear-gradient(145deg, #0b0f1a, #020617);
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ================= FLEX COLUMN ================= */
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ================= LABEL ================= */
+
+.add p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+/* ================= IMAGE UPLOAD ================= */
+
+.add-img-upload {
+  align-items: flex-start;
+}
+
+.add-img-upload img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+  border-radius: 16px;
+  padding: 15px;
+  cursor: pointer;
+
+  background: #0f172a;
+  border: 2px dashed rgba(56, 189, 248, 0.4);
+
+  transition: 0.3s ease;
+}
+
+.add-img-upload img:hover {
+  transform: scale(1.05);
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* ================= INPUTS ================= */
+
+.add input,
+.add textarea,
+.add select {
+  width: 100%;
+  padding: 14px 16px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #0f172a;
+  color: #e5e7eb;
+
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.add textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+.add input:focus,
+.add textarea:focus,
+.add select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+  outline: none;
+}
+
+/* ================= CATEGORY + PRICE GRID ================= */
+
+.add-category-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* ================= BUTTON ================= */
+
+.add-btn {
+  margin-top: 10px;
+  padding: 15px;
+
+  border-radius: 14px;
+  border: none;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  .add {
+    padding: 30px 18px;
+  }
+
+  .add form {
+    padding: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-category-price {
+    grid-template-columns: 1fr;
+  }
+
+  .add {
+    padding: 26px 16px;
+  }
+
+  .add form {
+    padding: 22px;
+    gap: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add {
+    padding: 22px 14px;
+  }
+
+  .add form {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .add-img-upload img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .add form {
+    padding: 16px;
+  }
+}
+
+
+/* 🔥 AI BUTTON STYLE */
+.ai-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(118, 75, 162, 0.4);
+}
+
+/* ✨ Hover Effect */
+.ai-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(118, 75, 162, 0.6);
+}
+
+/* 🔥 Click Effect */
+.ai-btn:active {
+  transform: scale(0.97);
+}
+
+/* ⏳ Loading State */
+.ai-btn.loading {
+  background: linear-gradient(135deg, #999, #666);
+  cursor: not-allowed;
+  box-shadow: none;
+}

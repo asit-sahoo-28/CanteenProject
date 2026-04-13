@@ -1,0 +1,230 @@
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body{
+  min-height: 100vh;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.app {
+  width: 80%;
+  margin: auto;
+}
+
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+
+  }
+  100%{
+    opacity: 1;
+  }
+} */
+
+/* .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  flex: 1;
+} */
+
+
+
+
+
+
+
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* MAIN LAYOUT */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PAGE TAKES REMAINING HEIGHT */
+.page-content {
+  flex: 1;
+  width: 100%;
+}
+
+/* 80% CENTERED CONTAINER */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Optional smooth animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
+
+
+
+
+
+/* ////////  below */
+
+/* ================= RESET ================= */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* ================= BODY ================= */
+
+/* html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+} */
+
+/* ================= APP LAYOUT ================= */
+/* .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} */
+
+/* ================= PAGE CONTENT ================= */
+/* .page-content {
+  flex: 1;
+  width: 100%;
+} */
+
+/* ================= CONTAINER ================= */
+/* 🔥 PROFESSIONAL WIDTH CONTROL */
+
+
+/* .container {
+  max-width: 1200px;   
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+} */
+
+
+
+
+/* //////////  above */
+
+
+
+
+
+
+
+/* 
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+ */
+
+
+
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: system-ui, sans-serif;
+  background-color: #FFFFFF; /* White */
+  color: #333333; /* Dark text */
+}
+
+/* ================= APP LAYOUT ================= */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= PAGE CONTENT ================= */
+.page-content {
+  flex: 1;
+  width: 100%;
+  padding-top: 30px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  padding: 0 40px;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+html, body {
+  overflow: auto;
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari */
+}

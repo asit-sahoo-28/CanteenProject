@@ -1,0 +1,194 @@
+/* .popular-items {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 20px 0;
+}
+
+.popular-items h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.popular-items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+/* Individual FoodItem card styling if needed */
+.popular-items-list > * {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.popular-items-list > *:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .popular-items {
+    padding: 15px;
+  }
+
+  .popular-items h2 {
+    font-size: 1.3rem;
+  }
+
+  .popular-items-list {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-items h2 {
+    font-size: 1.1rem;
+  }
+
+  .popular-items-list {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+}
+
+
+
+
+
+
+
+
+.popular-items {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.popular-items h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.popular-items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.popular-card {
+  position: relative;
+}
+
+/* Selling fast badge */
+.selling-fast {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 2;
+}
+
+/* Low stock text */
+.low-stock {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 0, 0, 0.9);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 2;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popular-items {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.popular-items h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Grid Layout */
+.popular-items-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+/* Important: Do NOT style > * */
+/* Let FoodItem control its own size */
+
+.popular-card {
+  position: relative;
+}
+
+/* Selling Fast Badge */
+.selling-fast {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ff5722, #ff9800);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+/* Low Stock Badge */
+.low-stock {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(255, 0, 0, 0.9);
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .popular-items-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-items-list {
+    grid-template-columns: 1fr;
+  }
+}

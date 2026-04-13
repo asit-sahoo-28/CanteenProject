@@ -1,0 +1,67 @@
+/* Main Bar */
+.offers-bar {
+  width: 100%;
+  background: linear-gradient(90deg, #ff5f6d, #ff9966);
+  overflow: hidden;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Moving Track */
+.offers-track {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+
+/* Each Offer */
+.offer-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+/* Coupon Pill */
+.coupon-pill {
+  background: white;
+  color: #ff5f6d;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+/* Timer */
+.timer {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .offer-item {
+    padding: 0 25px;
+    font-size: 13px;
+  }
+}
+
+
+
+
+
